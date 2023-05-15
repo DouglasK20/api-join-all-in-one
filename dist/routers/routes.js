@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+require("express-async-errors");
+const express_1 = require("express");
+const buscarEmpregos_1 = require("../controllers/buscarEmpregos");
+const buscarPessoas_1 = require("../controllers/buscarPessoas");
+// import { resolver } from '../helpers/api-erros';
+const router = (0, express_1.Router)();
+router.get("/buscaremprego", buscarEmpregos_1.buscarEmpregos);
+router.get("/buscarfamilia", buscarPessoas_1.buscarPessoas);
+exports.default = router;
